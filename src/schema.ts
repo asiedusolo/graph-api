@@ -31,7 +31,7 @@ export const typeDefs = `#graphql
         deleteGame(id: ID!): [Game]
     }
 
-    type GameInput {
+    input GameInput {
         title: String!
         platform: [String!]!
     }

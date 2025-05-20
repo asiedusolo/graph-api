@@ -65,6 +65,16 @@ const resolvers = {
             db.games = db.games.filter(game => game.id !== args.id)
 
             return db.games
+        },
+        addGame(_, args){
+            let game = {
+                ...args.game,
+                id: Math.floor(Math.random() * 1000000)
+            }
+            db.games.push(game)
+
+            return game
+
         }
     }
 }
